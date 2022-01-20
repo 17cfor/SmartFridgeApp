@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">SmartFridgeApp</string>
+    <string name="app_name">SmartFridge</string>
+
+    <string-array name="groceries">
+        <item>Carrot</item>
+        <item>Tomato</item>
+        <item>Celery</item>
+        <item>Broccoli</item>
+        <item>Onion</item>
+    </string-array>
 </resources>
