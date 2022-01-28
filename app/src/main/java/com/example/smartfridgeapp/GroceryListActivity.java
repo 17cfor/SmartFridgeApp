@@ -18,11 +18,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GroceryListActivity extends AppCompatActivity {
     private Button addItem;
     private Spinner dropDown;
     private ListView listView;
+    List<String> myList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class GroceryListActivity extends AppCompatActivity {
         addItem = (Button) findViewById(R.id.add);
         listView = findViewById(R.id.listView);
         dropDown = findViewById(R.id.spinner);
+
+        myList = new ArrayList<>();
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(GroceryListActivity.this,android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.groceries));
@@ -45,10 +49,14 @@ public class GroceryListActivity extends AppCompatActivity {
                 if(txt_name.isEmpty()){
                     Toast.makeText(GroceryListActivity.this,"No Item Entered", Toast.LENGTH_SHORT).show();
                 }else{
-                    FirebaseDatabase.getInstance().getReference().child("Grocery List").push().setValue(txt_name);
+                    myList.add(txt_name);
+                    myList.add(String.valueOf(1));
+                    FirebaseDatabase.getInstance().getReference().child("Grocery List").push().setValue(myList);
+                    myList.clear();
                 }
             }
         });
+
         final ArrayList<String> list = new ArrayList<>();
         final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
         listView.setAdapter(adapter);
