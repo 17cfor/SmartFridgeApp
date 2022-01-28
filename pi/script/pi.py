@@ -2,7 +2,7 @@
 import time
 import board
 import busio as io
-import adafruit_mlx90614
+import adgitafruit_mlx90614
 import pyrebase
 
 i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
