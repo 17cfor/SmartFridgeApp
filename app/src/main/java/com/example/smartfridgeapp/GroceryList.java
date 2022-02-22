@@ -21,4 +21,7 @@ public class GroceryList {
         return number;
     }
 
+    public void setNumber(Integer num){
+        this.number = num;
+    }
 }

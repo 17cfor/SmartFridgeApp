@@ -6,33 +6,137 @@
     android:layout_height="match_parent"
     tools:context=".GroceryListActivity">
 
-    <Button
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="+"
-        android:textSize="24sp" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/add"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="10dp"
-        android:padding="10dp" />
+    <TextView
+        android:id="@+id/onion"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="85dp"
+        android:text="Onions"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Grocery List"
-        android:textSize="40dp"
-        android:layout_centerHorizontal="true" />
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/numOnion"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/onion"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/numCarrot"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/numOnion"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/carrot"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/numOrange"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/numCarrot"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/carrot"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/numApple"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/numOrange"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/carrot"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/numLettuce"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/numApple"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/carrot"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/carrot"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
+        android:text="Carrots"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/orange"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carrot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
+        android:text="Oranges"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/apple"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
+        android:text="Apples"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lettuce"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/apple"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
+        android:text="Lettuce"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/updateGrocery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:text="Update" />
 
 
 </RelativeLayout>
