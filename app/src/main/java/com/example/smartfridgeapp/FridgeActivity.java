@@ -49,9 +49,10 @@ public class FridgeActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list.clear();
                 for (DataSnapshot snapshot :dataSnapshot.getChildren()){
-                    FridgeList fridge_items = snapshot.getValue(FridgeList.class);
-                    String txt = fridge_items.getNumber() + " : " + fridge_items.getItem();
-                    list.add(txt);
+                      list.add(snapshot.getKey() + " : " + snapshot.getValue().toString());
+//                    FridgeList fridge_items = snapshot.getValue(FridgeList.class);
+//                    String txt = fridge_items.getItem() + " : " + fridge_items.getNumber();
+//                    list.add(fridge_items.getItem());
                 }
                 adapter.notifyDataSetChanged();
             }
