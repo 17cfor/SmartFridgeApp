@@ -8,14 +8,14 @@
 
 
     <TextView
-        android:id="@+id/onion"
+        android:id="@+id/apple"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="85dp"
-        android:text="Onions"
+        android:text="Apples"
         android:textSize="20dp" />
 
     <TextView
@@ -27,13 +27,13 @@
         android:textSize="40dp" />
 
     <EditText
-        android:id="@+id/numOnion"
+        android:id="@+id/numApple"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_below="@id/textView"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="30dp"
-        android:layout_toStartOf="@+id/onion"
+        android:layout_toStartOf="@+id/apple"
         android:ems="10"
         android:inputType="number"
         android:textSize="14sp" />
@@ -42,7 +42,7 @@
         android:id="@+id/numCarrot"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_below="@id/numOnion"
+        android:layout_below="@id/numApple"
         android:layout_marginTop="-5dp"
         android:layout_marginEnd="30dp"
         android:layout_toStartOf="@+id/carrot"
@@ -54,19 +54,19 @@
         android:id="@+id/numOrange"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_below="@id/numCarrot"
+        android:layout_below="@id/numOnion"
         android:layout_marginTop="-5dp"
         android:layout_marginEnd="30dp"
-        android:layout_toStartOf="@+id/carrot"
+        android:layout_toStartOf="@+id/onion"
         android:ems="10"
         android:inputType="number"
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/numApple"
+        android:id="@+id/numOnion"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_below="@id/numOrange"
+        android:layout_below="@id/numLettuce"
         android:layout_marginTop="-5dp"
         android:layout_marginEnd="30dp"
         android:layout_toStartOf="@+id/carrot"
@@ -78,7 +78,7 @@
         android:id="@+id/numLettuce"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_below="@id/numApple"
+        android:layout_below="@id/numCarrot"
         android:layout_marginTop="-5dp"
         android:layout_marginEnd="30dp"
         android:layout_toStartOf="@+id/carrot"
@@ -90,7 +90,7 @@
         android:id="@+id/carrot"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/onion"
+        android:layout_below="@id/apple"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
@@ -101,7 +101,7 @@
         android:id="@+id/orange"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/carrot"
+        android:layout_below="@id/onion"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
@@ -109,21 +109,21 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/apple"
+        android:id="@+id/onion"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/orange"
+        android:layout_below="@id/lettuce"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
-        android:text="Apples"
+        android:text="Onions"
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/lettuce"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/apple"
+        android:layout_below="@id/carrot"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
