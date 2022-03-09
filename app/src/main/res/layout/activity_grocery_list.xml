@@ -39,7 +39,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/numCarrot"
+        android:id="@+id/numBanana"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_below="@id/numApple"
@@ -51,31 +51,19 @@
         android:textSize="14sp" />
 
     <EditText
+        android:id="@+id/numCarrot"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/numBanana"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/orange"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
         android:id="@+id/numOrange"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/numOnion"
-        android:layout_marginTop="-5dp"
-        android:layout_marginEnd="30dp"
-        android:layout_toStartOf="@+id/onion"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="14sp" />
-
-    <EditText
-        android:id="@+id/numOnion"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/numLettuce"
-        android:layout_marginTop="-5dp"
-        android:layout_marginEnd="30dp"
-        android:layout_toStartOf="@+id/carrot"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="14sp" />
-
-    <EditText
-        android:id="@+id/numLettuce"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_below="@id/numCarrot"
@@ -86,22 +74,45 @@
         android:inputType="number"
         android:textSize="14sp" />
 
+    <EditText
+        android:id="@+id/numTomato"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/numOrange"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/apple"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
     <TextView
-        android:id="@+id/carrot"
-        android:layout_width="75dp"
+        android:id="@+id/banana"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/apple"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
-        android:text="Carrots"
+        android:text="Bananas"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
+        android:text="Tomatos"
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/orange"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/onion"
+        android:layout_below="@id/carrot"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
@@ -109,25 +120,14 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/onion"
+        android:id="@+id/carrot"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lettuce"
+        android:layout_below="@id/banana"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
-        android:text="Onions"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/lettuce"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/carrot"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="85dp"
-        android:text="Lettuce"
+        android:text="Carrots"
         android:textSize="20dp" />
 
     <Button

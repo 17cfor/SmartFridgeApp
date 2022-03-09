@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class GroceryListActivity extends AppCompatActivity {
 
     private EditText apple;
+    private EditText banana;
     private EditText carrot;
-    private EditText lettuce;
-    private EditText onion;
     private EditText orange;
+    private EditText tomato;
 
 
     private Button updateGrocery;
@@ -37,10 +37,10 @@ public class GroceryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grocery_list);
         apple = (EditText)findViewById(R.id.numApple);
+        banana = (EditText)findViewById(R.id.numBanana);
         carrot = (EditText)findViewById(R.id.numCarrot);
-        lettuce = (EditText)findViewById(R.id.numLettuce);
-        onion = (EditText)findViewById(R.id.numOnion);
         orange = (EditText)findViewById(R.id.numOrange);
+        tomato = (EditText)findViewById(R.id.numTomato);
 
 
         updateGrocery = findViewById(R.id.updateGrocery);
@@ -65,10 +65,10 @@ public class GroceryListActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         // get inputs and convert to int
                         groceryNumbers[0] = Integer.parseInt(apple.getText().toString());
-                        groceryNumbers[1] = Integer.parseInt(carrot.getText().toString());
-                        groceryNumbers[2] = Integer.parseInt(lettuce.getText().toString());
-                        groceryNumbers[3] = Integer.parseInt(onion.getText().toString());
-                        groceryNumbers[4] = Integer.parseInt(orange.getText().toString());
+                        groceryNumbers[1] = Integer.parseInt(banana.getText().toString());
+                        groceryNumbers[2] = Integer.parseInt(carrot.getText().toString());
+                        groceryNumbers[3] = Integer.parseInt(orange.getText().toString());
+                        groceryNumbers[4] = Integer.parseInt(tomato.getText().toString());
 
                         int i = 0;
                         for (DataSnapshot snapshot :dataSnapshot.getChildren()){
@@ -108,10 +108,10 @@ public class GroceryListActivity extends AppCompatActivity {
     public void updateList(DataSnapshot dataSnapshot)
     {
         apple.setText(dataSnapshot.child("apple").getValue(String.class));
+        banana.setText(dataSnapshot.child("banana").getValue(String.class));
         carrot.setText(dataSnapshot.child("carrot").getValue(String.class));
-        lettuce.setText(dataSnapshot.child("lettuce").getValue(String.class));
-        onion.setText(dataSnapshot.child("onion").getValue(String.class));
         orange.setText(dataSnapshot.child("orange").getValue(String.class));
+        tomato.setText(dataSnapshot.child("tomato").getValue(String.class));
 
     }
 
