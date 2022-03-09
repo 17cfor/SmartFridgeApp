@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button groceryList;
     private Button logout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,15 +37,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        logout = findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Toast.makeText(MainActivity.this, "Logged Out!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, StartActivity.class));
-            }
-        });
+
     }
 
     private void openGroceryListActivity() {
@@ -56,4 +49,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent2 = new Intent(this, FridgeActivity.class);
         startActivity(intent2);
     }
+
 }
