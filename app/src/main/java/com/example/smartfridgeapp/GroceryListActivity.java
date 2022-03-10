@@ -62,6 +62,7 @@ public class GroceryListActivity extends AppCompatActivity {
         final ArrayList<String> list = new ArrayList<>();
         final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.diff_item, list);
         listView.setAdapter(adapter);
+        final int[] check = {1};
 
         g_reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -74,11 +75,36 @@ public class GroceryListActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         list.clear();
                         // get inputs and convert to int
-                        groceryNumbers[0] = Integer.parseInt(apple.getText().toString());
-                        groceryNumbers[1] = Integer.parseInt(banana.getText().toString());
-                        groceryNumbers[2] = Integer.parseInt(carrot.getText().toString());
-                        groceryNumbers[3] = Integer.parseInt(orange.getText().toString());
-                        groceryNumbers[4] = Integer.parseInt(tomato.getText().toString());
+                        while(check[0] == 1)
+                        {
+                         try {
+                                groceryNumbers[0] = Integer.parseInt(apple.getText().toString());
+                            } catch (Exception e) {
+                                Toast.makeText(GroceryListActivity.this, "Invalid Input!", Toast.LENGTH_SHORT).show();
+                            }
+                            try {
+                                groceryNumbers[1] = Integer.parseInt(banana.getText().toString());
+                            } catch (Exception e) {
+                                Toast.makeText(GroceryListActivity.this, "Invalid Input!", Toast.LENGTH_SHORT).show();
+                            }
+                            try {
+                                groceryNumbers[2] = Integer.parseInt(carrot.getText().toString());
+                            } catch (Exception e) {
+                                Toast.makeText(GroceryListActivity.this, "Invalid Input!", Toast.LENGTH_SHORT).show();
+                            }
+                            try {
+                                groceryNumbers[3] = Integer.parseInt(orange.getText().toString());
+                            } catch (Exception e) {
+                                Toast.makeText(GroceryListActivity.this, "Invalid Input!", Toast.LENGTH_SHORT).show();
+                            }
+                            try {
+                                groceryNumbers[4] = Integer.parseInt(tomato.getText().toString());
+                            } catch (Exception e) {
+                                Toast.makeText(GroceryListActivity.this, "Invalid Input!", Toast.LENGTH_SHORT).show();
+                            }
+                            check[0] = 0;
+                        }
+                        check[0] = 1;
 
                         int i = 0;
                         for (DataSnapshot snapshot :dataSnapshot.getChildren()){
