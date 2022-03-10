@@ -16,15 +16,15 @@
         android:layout_marginTop="21dp"
         android:layout_marginEnd="85dp"
         android:text="Apples"
-        android:textSize="20dp" />
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Grocery List"
-        android:textSize="40dp" />
+        android:text="Want in fridge:"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/numApple"
@@ -88,25 +88,25 @@
 
     <TextView
         android:id="@+id/banana"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/apple"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
         android:text="Bananas"
-        android:textSize="20dp" />
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tomato"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/orange"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
         android:text="Tomatos"
-        android:textSize="20dp" />
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/orange"
@@ -117,7 +117,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
         android:text="Oranges"
-        android:textSize="20dp" />
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/carrot"
@@ -128,15 +128,32 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
         android:text="Carrots"
-        android:textSize="20dp" />
+        android:textSize="18dp" />
 
     <Button
         android:id="@+id/updateGrocery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
+        android:layout_below="@id/tomato"
+        android:layout_marginTop="20dp"
         android:text="Update" />
+
+    <TextView
+        android:id="@+id/need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateGrocery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="85dp"
+        android:text="Need to buy::"
+        android:textSize="20dp" />
+    <ListView
+        android:id="@+id/list_diff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/need"
+        android:layout_marginTop="3dp" />
 
 
 </RelativeLayout>
