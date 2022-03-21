@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+
 public class FridgeActivity extends AppCompatActivity {
     private Button back;
     private ListView listView;
@@ -56,11 +57,14 @@ public class FridgeActivity extends AppCompatActivity {
                 }
 
                 adapter.notifyDataSetChanged();
+
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-            }
+
+           }
+
         });
 
     }

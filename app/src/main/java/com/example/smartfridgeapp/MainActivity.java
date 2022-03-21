@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button groceryList;
     private Button logout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,4 +57,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent2 = new Intent(this, FridgeActivity.class);
         startActivity(intent2);
     }
+
 }
