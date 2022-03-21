@@ -35,10 +35,10 @@ public class FridgeActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(FridgeActivity.this, "Logged Out!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(FridgeActivity.this, MainActivity.class));
             }
         });
+
 
         final ArrayList<String> list = new ArrayList<>();
         final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.fridge_item, list);
@@ -49,12 +49,13 @@ public class FridgeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list.clear();
-                for (DataSnapshot snapshot :dataSnapshot.getChildren()){
-                    list.add(snapshot.getKey() + " : " + snapshot.getValue().toString());
-//                    FridgeList fridge_items = snapshot.getValue(FridgeList.class);
-//                    String txt = fridge_items.getNumber() + " : " + fridge_items.getItem();
-//                    list.add(txt);
+                for (DataSnapshot snapshot :dataSnapshot.child("food").getChildren()){
+                    list.add(snapshot.getKey().substring(0, 1).toUpperCase() + snapshot.getKey().substring(1)  + " : " + snapshot.getValue().toString());
+                    for (DataSnapshot snapshot2 :dataSnapshot.child("non_food").getChildren()){
+                        Toast.makeText(FridgeActivity.this, "Warning: there is a phone in the fridge", Toast.LENGTH_SHORT).show();
+                    }
                 }
+
                 adapter.notifyDataSetChanged();
 
             }
