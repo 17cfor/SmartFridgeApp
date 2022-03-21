@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,21 +39,23 @@ public class FridgeActivity extends AppCompatActivity {
             }
         });
 
+
         final ArrayList<String> list = new ArrayList<>();
         final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.fridge_item, list);
         listView.setAdapter(adapter);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Fridge").child("food");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Fridge");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list.clear();
-                for (DataSnapshot snapshot :dataSnapshot.getChildren()){
+                for (DataSnapshot snapshot :dataSnapshot.child("food").getChildren()){
                     list.add(snapshot.getKey().substring(0, 1).toUpperCase() + snapshot.getKey().substring(1)  + " : " + snapshot.getValue().toString());
-//                    FridgeList fridge_items = snapshot.getValue(FridgeList.class);
-//                    String txt = fridge_items.getNumber() + " : " + fridge_items.getItem();
-//                    list.add(txt);
+                    for (DataSnapshot snapshot2 :dataSnapshot.child("non_food").getChildren()){
+                        Toast.makeText(FridgeActivity.this, "Warning: there is a phone in the fridge", Toast.LENGTH_SHORT).show();
+                    }
                 }
+
                 adapter.notifyDataSetChanged();
 
             }
