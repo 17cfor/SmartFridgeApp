@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class FridgeActivity extends AppCompatActivity {
     private Button back;
     private ListView listView;
-//    private Button refresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class FridgeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fridge);
 
         back = findViewById(R.id.back);
-//        refresh = findViewById(R.id.refresh);
         listView  = findViewById(R.id.listView);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -39,13 +37,7 @@ public class FridgeActivity extends AppCompatActivity {
                 startActivity(new Intent(FridgeActivity.this, MainActivity.class));
             }
         });
-//
-//        refresh.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(FridgeActivity.this, FridgeActivity.class));
-//            }
-//        });
+
 
         final ArrayList<String> list = new ArrayList<>();
         final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.fridge_item, list);

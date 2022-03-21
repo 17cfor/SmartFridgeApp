@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="6dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toStartOf="@+id/listView"
@@ -46,32 +46,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/refresh"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentLeft="true"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginStart="10dp"-->
-    <!--        android:layout_marginLeft="28dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:layout_marginBottom="9dp"-->
-    <!--        android:drawableRight="@drawable/ic_baseline_refresh_24"-->
-    <!--        android:text="refresh"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--        app:layout_constraintRight_toRightOf="parent" />-->
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/back"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="300dp"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@id/back"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="What's in the Fridge"
+        android:text="Fridge List"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -129,6 +112,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@mipmap/ic_tomato" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="12dp"
+        android:text="Fruits and Vegetables"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
